@@ -1,6 +1,8 @@
 html, body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .grid {
@@ -101,28 +103,3 @@ html, body {
     grid-column-end: span 1;
   }
 }
-
-
-/* .col1 {
-  grid-column-end: span 12;
-}
-
-.col2 {
-  grid-column-end: span 6;
-}
-
-.col3 {
-  grid-column-end: span 4;
-}
-
-.col4 {
-  grid-column-end: span 3;
-}
-
-.col6 {
-  grid-column-end: span 2;
-}
-
-.col12 {
-  grid-column-end: span 1;
-} */
