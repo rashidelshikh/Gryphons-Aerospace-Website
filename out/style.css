@@ -555,7 +555,7 @@ footer {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.index-intro, .team-intro, .airframes-intro {
+.index-intro, .team-intro, .airframes-intro, .contact-intro {
   padding-top: 8rem;
   padding-bottom: 5rem;
 }
@@ -588,7 +588,7 @@ footer {
   background-size: cover;
 }
 
-.index-intro-text {
+.intro-text {
   align-content: end;
 }
 
@@ -654,4 +654,30 @@ footer {
   margin: 0 auto;
   width: 100%;
   max-width: 416px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: CONTACT US ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.contact-club {
+  padding-top: 4.4rem;
+  padding-bottom: 12rem;
+}
+
+.contact-group {
+  padding-bottom: 5.125rem;
+}
+
+.contact-socials {
+  margin-top: 1.8rem;
+  margin-bottom: 2.25rem;
+  display: flex;  
+  gap: 1.2rem;
+}
+
+.contact-socials-img {
+  // width: 1.5rem;
+  transition: all 0.13s ease-in;
+}
+
+.contact-socials-img:hover {
+  opacity: 0.7;
 }
