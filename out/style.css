@@ -268,6 +268,11 @@ small {
   .footer_buttons {
   line-height: 100%;
   }
+
+  /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
+  .airframe-list {
+  grid-gap: 2.6rem 0;
+  }
 }
 
 
@@ -315,6 +320,11 @@ small {
   .footer_buttons {
   line-height: 140%;
   }
+
+  /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
+  .airframe-list {
+  grid-gap: 2rem;
+  }
 }
 
 
@@ -361,6 +371,11 @@ small {
   /* ~~~~~~ FOOTER ~~~~~~ */
   .footer_buttons {
   line-height: 173%;
+  }
+
+  /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
+  .airframe-list {
+  grid-gap: 2.8rem;
   }
 }
 
@@ -540,7 +555,7 @@ footer {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.index-intro, .team-intro {
+.index-intro, .team-intro, .airframes-intro {
   padding-top: 8rem;
   padding-bottom: 5rem;
 }
@@ -568,9 +583,7 @@ footer {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: INDEX ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .index-intro {
-  // opacity: 0.5;
   background: rgba(244, 238, 222, 0.5);
-  // height: 100vh;
   background-image: url(images/assets/background-pattern.svg);
   background-size: cover;
 }
@@ -579,7 +592,7 @@ footer {
   align-content: end;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: INDEX ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: OUR TEAM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .team-list {
   text-align: left;
   padding: 4.1rem 2rem 0 2rem;
@@ -601,6 +614,10 @@ footer {
   text-align: center;
 }
 
+.profile p {
+  margin: 0.3rem;
+}
+
 .spaceline-profile-pill {
   position: absolute;
   transform: translate(-278px, 90px) scale(0.95);
@@ -619,4 +636,22 @@ footer {
 
 .profile-name {
   margin-top: 0.938rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: AIRFRAMES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.airframe-img {
+  // max-width: 416px;
+  width: 100%;
+}
+
+.airframe-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 0 1rem;
+}
+
+.airframe {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 416px;
 }
