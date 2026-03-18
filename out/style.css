@@ -260,7 +260,7 @@ small {
 
   /* ~~~~~~ GRID ~~~~~~ */
   .grid {
-    padding: 0 70px;
+    padding: 0 2.7rem;
     grid-gap: 20px;
   }
 
@@ -312,7 +312,7 @@ small {
 
   /* ~~~~~~ GRID ~~~~~~ */
   .grid {
-    padding: 0 70px;
+    padding: 0 4.375rem;
     grid-gap: 20px;
   }
 
@@ -364,7 +364,7 @@ small {
 
   /* ~~~~~~ GRID ~~~~~~ */
   .grid {
-    padding: 0 70px;
+    padding: 0 4.375rem;
     grid-gap: 20px;
   }
 
@@ -560,6 +560,10 @@ footer {
   padding-bottom: 5rem;
 }
 
+.intro-p-only {
+  margin-top: 2.375rem;
+}
+
 .post-intro {
   text-align: center;
   padding-top: 4.4rem;
@@ -658,26 +662,30 @@ footer {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: CONTACT US ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .contact-club {
-  padding-top: 4.4rem;
-  padding-bottom: 12rem;
+  padding-top: 2.4rem;
+  padding-bottom: 9rem;
 }
 
 .contact-group {
-  padding-bottom: 5.125rem;
+  padding-bottom: 6.7rem;
 }
 
 .contact-socials {
   margin-top: 1.8rem;
-  margin-bottom: 2.25rem;
+  // margin-bottom: 2.25rem;
   display: flex;  
   gap: 1.2rem;
 }
 
 .contact-socials-img {
-  // width: 1.5rem;
+  width: 2.21rem;
   transition: all 0.13s ease-in;
 }
 
 .contact-socials-img:hover {
   opacity: 0.7;
+}
+
+.contact-group .button {
+  margin-top: 3.3rem;
 }
