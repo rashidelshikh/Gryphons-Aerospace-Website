@@ -1,20 +1,175 @@
-html, body {
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADING 1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLOURS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~ COLOURS ~~~~~~~~~~~~~~ */
+/*  Light  */
+
+
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VARIABLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  /* ~~~~~~~~~~~~~~ COLOURS ~~~~~~~~~~~~~~ */
+  --gryphon-red: #C20430;
+  --gryphon-gold: #FFC72C;
+
+  /*  Light  */
+  --ecru: #F4EEDE;
+
+  /*  Main  */
+  --yellow: #FACA6A;
+  --red: #D03239;
+
+  /* Variants  */
+  --red-dark: #B0252B;
+  --red-darker: #902227;
+  --red-darkest: #6F0F13;
+
+  /*  Greys, browns & whites  */
+  --white: #FEFEFE;
+  --grey-100: #F5F4F1;
+  --grey-200: #C3C1BF;
+  --brown: #261F1F;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ REUSABLE CLASSES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.text-above-img {
+  margin-bottom: 3rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+h1, h2, h3, h4, h5, h6, p, .subtitle {
+  margin: 0;
+}
+h1 {
+  // color: var(--brown);
+  font-family: Anton;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+  letter-spacing: -1.92px;
+  text-transform: uppercase;
+  margin-top: 0.188rem;
+}
+
+h3 {
+  // color: var(--brown);
+  font-family: Anton;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2.375rem;
+}
+
+p {
+  // color: var(--brown);
+  font-family: "Albert Sans";
+  font-size: 1.313rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+  margin: 0.8rem 0;
+}
+
+small {
+  font-family: "Albert Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+  margin: 0.8rem 0;
+  opacity: 0.5;
+}
+
+.p-alt {
+  font-family: "Albert Sans";
+  font-size: 1.313rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+  letter-spacing: -0.6px;
+}
+
+.subtitle {
+  color: #BEBEBE;
+  font-family: Anton;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+  letter-spacing: 0.16px;
+  text-transform: uppercase;
+}
+
+.tagline {
+  font-family: "Albert Sans";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%; /* 42.56px */
+  letter-spacing: -1.28px;
+}
+
+.link {
+  text-decoration: none;
+  transition: all 0.4s;
+  font-weight: 500;
+  color: var(--red);
+  font-style: normal;
+  transition: all 0.1s ease-out;
+}
+
+.link:hover {
+  // color: var(--red-dark);
+  opacity: 0.85;
+}
+
+.link:active {
+  opacity: 0.7;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ IMAGES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.img {
+  width: 100%;
+  object-fit: cover;
+  // aspect-ratio: 1/1;
+  border-radius: 16px;
+}
+
+.img-border {
+  border: 1px solid var(--grey-100);
+
+}
+
+.spaceline-h1 {
+  position: absolute;
+  transform: translate(-68px, -82px);
+  z-index: inherit;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GRID LAYOUT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: 10px;
 }
 
-.cell {
-  background-color: rgb(220,220,220);
-  height: 100px;
-}
+// .cell {
+//   background-color: rgb(220,220,220);
+//   height: 100px;
+// }
 
 /* default - small devices */
 [class*="col"] {
@@ -26,25 +181,40 @@ html, body {
   .sm1 {
     grid-column-end: span 12;
   }
-  
+
   .sm2 {
     grid-column-end: span 6;
   }
-  
+
   .sm3 {
     grid-column-end: span 4;
   }
-  
+
   .sm4 {
     grid-column-end: span 3;
   }
-  
+
   .sm6 {
     grid-column-end: span 2;
   }
-  
+
   .sm12 {
     grid-column-end: span 1;
+  }
+
+  .smhide {
+    display: none;
+  }
+
+  /* ~~~~~~ GRID ~~~~~~ */
+  .grid {
+    padding: 0 70px;
+    grid-gap: 20px;
+  }
+
+  /* ~~~~~~ FOOTER ~~~~~~ */
+  .footer_buttons {
+  line-height: 100%;
   }
 }
 
@@ -54,25 +224,44 @@ html, body {
   .md1 {
     grid-column-end: span 12;
   }
-  
+
   .md2 {
     grid-column-end: span 6;
   }
-  
+
   .md3 {
     grid-column-end: span 4;
   }
-  
+
   .md4 {
     grid-column-end: span 3;
   }
-  
+
   .md6 {
     grid-column-end: span 2;
   }
-  
+
   .md12 {
     grid-column-end: span 1;
+  }
+
+  .mdspan8 {
+    grid-column-end: span 8;
+  }
+
+  .mdspan10 {
+    grid-column-end: span 10;
+  }
+
+  /* ~~~~~~ GRID ~~~~~~ */
+  .grid {
+    padding: 0 70px;
+    grid-gap: 20px;
+  }
+
+  /* ~~~~~~ FOOTER ~~~~~~ */
+  .footer_buttons {
+  line-height: 140%;
   }
 }
 
@@ -82,24 +271,233 @@ html, body {
   .col1 {
     grid-column-end: span 12;
   }
-  
+
   .col2 {
     grid-column-end: span 6;
   }
-  
+
   .col3 {
     grid-column-end: span 4;
   }
-  
+
   .col4 {
     grid-column-end: span 3;
   }
-  
+
   .col6 {
     grid-column-end: span 2;
   }
-  
+
   .col12 {
     grid-column-end: span 1;
   }
+
+  .span8 {
+    grid-column-end: span 8;
+  }
+
+  .span10 {
+    grid-column-end: span 10;
+  }
+
+  /* ~~~~~~ GRID ~~~~~~ */
+  .grid {
+    padding: 0 70px;
+    grid-gap: 20px;
+  }
+
+  /* ~~~~~~ FOOTER ~~~~~~ */
+  .footer_buttons {
+  line-height: 173%;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NAVIGATION MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+nav {
+  background-color: var(--white);
+  padding: 15px 47px;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  z-index: 100;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* ______________ NAVIGATION MENU (burger) ______________ */
+#nav-trigger {
+  display: none;
+  position: absolute;
+}
+
+label[for="nav-trigger"] {
+  // float: right;
+  z-index: 200;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 100;
+  animation-name: whitetoblack;
+  animation-duration: 0.5s;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+label[for="nav-trigger"]:hover {
+  // line-height: 0.25;
+  color: var(--brown);
+}
+
+.burger, .burger-t, .burger-b {
+  position: relative;
+  transition: all 0.4s ease;}
+
+.label[for="nav-trigger"]:hover .burger-t {
+  transform: rotate(3deg);
+  fill: red;
+}
+
+.label[for="nav-trigger"]:hover .burger-b {
+  transform: translate(-2px, 2px);
+}
+
+.nav-trigger:checked+label {
+  opacity: 100%;
+  animation-name: blacktowhite;
+  animation-duration: 0.5s;
+}
+
+.nav-trigger:checked~.nav_burger_content {
+  right: 0;
+}
+
+.nav_burger_content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 15px;
+
+  top: 0;
+  margin: 0;
+  padding: 7rem 2.25rem 2.25rem 2.25rem;
+
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  right: calc(-280px - 4.5rem);
+  background: var(--grey-100);
+  transition: all 0.5s ease;
+}
+
+.nav_burger_ul {
+  margin: 0;
+  padding: 0;
+  vertical-align: text-top;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.nav_burger_li {
+    transition: all 0.4s ease;
+}
+
+.nav_buttons {
+  text-decoration: none;
+  /* padding: 5px; */
+  color: var(--brown);
+  transition: all 0.4s;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 2.4em;
+}
+
+.nav_burger_li:hover {
+  transform: translate(2px, 0px);
+}
+
+.nav_burger_li:hover .nav_buttons {
+  color: var(--red);
+}
+
+.nav_burger_logo {
+  margin: 0;
+  padding-left: 60px;
+  vertical-align: text-top;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+#nav_burger_logo {
+  opacity: 100%;
+}
+
+#nav_burger_logo_filled {
+  position: relative;
+  right: 126.3px;
+  opacity: 0%;
+}
+
+#nav_burger_logo_filled:hover {
+  opacity: 100%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+footer {
+  background-color: var(--red-darkest);
+  color: var(--white);
+  padding-top: 42px!important;
+  padding-bottom: 42px!important;
+}
+
+.footer_buttons {
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.15s ease-out;
+  font-size: 18px!important;
+}
+
+.footer_buttons:hover {
+  // color: var(--gryphon-gold);
+  opacity: 0.7;
+}
+
+.footer-socials {
+  margin-top: 2.25rem;
+  margin-bottom: 3.5rem;
+  display: flex;  
+  gap: 1.6rem;
+}
+
+.footer-socials-img {
+  width: 1.5rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: INDEX ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.index-intro {
+  // opacity: 0.5;
+  background: rgba(244, 238, 222, 0.5);
+  // height: 100vh;
+  padding-top: 9rem;
+  padding-bottom: 5rem;
+  background-image: url(images/assets/background-pattern.svg);
+}
+
+.index-intro-text {
+  align-content: end;
+}
+
+.index-team {
+  text-align: center;
+  padding-top: 4.4rem;
+  padding-bottom: 12rem;
 }
