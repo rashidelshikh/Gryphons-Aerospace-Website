@@ -13,6 +13,10 @@ body {
   padding: 0;
 }
 
+::selection {
+  background: rgba(208, 50, 58, 0.17);
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VARIABLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -37,6 +41,7 @@ body {
 
   /*  Greys, browns & whites  */
   --white: #FEFEFE;
+  --grey-50: #FAFAF8;
   --grey-100: #F5F4F1;
   --grey-200: #C3C1BF;
   --brown: #261F1F;
@@ -61,6 +66,15 @@ h1 {
   letter-spacing: -1.92px;
   text-transform: uppercase;
   margin-top: 0.188rem;
+}
+
+h2 {
+  font-family: Anton;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -89,7 +103,7 @@ small {
   font-style: normal;
   font-weight: 400;
   line-height: 133%;
-  margin: 0.8rem 0;
+  margin: 0.4rem 0;
   opacity: 0.5;
 }
 
@@ -122,6 +136,41 @@ small {
   letter-spacing: -1.28px;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BUTTONS & LINKS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.button {
+  color: var(--white, #FEFEFE);
+  font-family: "Albert Sans";
+  font-size: 1.313rem;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.42px;
+
+  text-decoration: none;
+  font-weight: 500;
+  font-style: normal;
+  transition: all 0.13s ease-out;
+  text-align: center;
+
+  background-color: var(--red);
+  padding: 0.688rem 1rem;
+  border-radius: 3rem;
+  margin-top: 1.875rem;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: var(--red-dark);
+}
+
+.button:active {
+  background-color: var(--red-darker);
+}
+
+.button-disabled {
+  background-color: var(--grey-100);
+  color: var(--grey-200);
+}
+
 .link {
   text-decoration: none;
   transition: all 0.4s;
@@ -144,8 +193,11 @@ small {
 .img {
   width: 100%;
   object-fit: cover;
-  // aspect-ratio: 1/1;
   border-radius: 16px;
+}
+
+.img-header {
+  aspect-ratio: 1/1;
 }
 
 .img-border {
@@ -314,7 +366,7 @@ small {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NAVIGATION MENU ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 nav {
-  background-color: var(--white);
+    background-color: var(--grey-50);
   padding: 15px 47px;
   font-family: "Anton", sans-serif;
   font-weight: 400;
@@ -480,6 +532,38 @@ footer {
 
 .footer-socials-img {
   width: 1.5rem;
+  transition: all 0.13s ease-in;
+}
+
+.footer-socials-img:hover {
+  opacity: 0.7;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.index-intro, .team-intro {
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+.post-intro {
+  text-align: center;
+  padding-top: 4.4rem;
+  padding-bottom: 12rem;
+}
+
+.post-intro-short {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 6rem;
+}
+
+.cta-banner {
+  padding: 4.25rem 0 2.6rem;
+  margin-bottom: 2rem;
+  background: rgba(111, 15, 18, 0.03);
+  background-image: url(images/assets/background-cta.svg);
+  background-size: cover;
+  text-align: center;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: INDEX ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -487,17 +571,52 @@ footer {
   // opacity: 0.5;
   background: rgba(244, 238, 222, 0.5);
   // height: 100vh;
-  padding-top: 9rem;
-  padding-bottom: 5rem;
   background-image: url(images/assets/background-pattern.svg);
+  background-size: cover;
 }
 
 .index-intro-text {
   align-content: end;
 }
 
-.index-team {
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: INDEX ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.team-list {
+  text-align: left;
+  padding: 4.1rem 2rem 0 2rem;
+}
+
+.role-list {
+  margin-bottom: 6.25rem;
+}
+
+.role-profiles {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem 3.6rem;
+  // justify-content: space-between;
+}
+
+.profile {
   text-align: center;
-  padding-top: 4.4rem;
-  padding-bottom: 12rem;
+}
+
+.spaceline-profile-pill {
+  position: absolute;
+  transform: translate(-278px, 90px) scale(0.95);
+  z-index: inherit;
+}
+
+.spaceline-profile-rect {
+  position: absolute;
+  transform: translate(-272px, 114px);
+  z-index: inherit;
+}
+
+.profile-img {
+  width: 223px;
+}
+
+.profile-name {
+  margin-top: 0.938rem;
 }
