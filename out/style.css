@@ -306,10 +306,6 @@ small {
     transform: translate(-1rem, 0.5rem);
   }
 
-  .nav_buttons {
-  font-size: 1.5rem!important;
-  }
-
   /* ~~~~~~ TYPOGRAPHY ~~~~~~ */
   p {
     font-size: 1.125rem!important;
