@@ -19,7 +19,7 @@ body {
 }
 
 ::selection {
-  background: rgba(208, 50, 58, 0.17);
+  background: rgba(208, 50, 58, 0.24);
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VARIABLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -470,6 +470,11 @@ small {
   line-height: 173%;
   }
 
+  /* ~~~~~~ PAGES: GENERAL ~~~~~~ */
+  .intro-text {
+    padding-right: 3.5rem;
+  }
+
   /* ~~~~~~ PAGES: TEAM ~~~~~~ */
   .team-list {
     padding: 4.1rem 2rem 0 2rem;
@@ -771,6 +776,7 @@ footer {
 
 .profile {
   text-align: center;
+  max-width: 223px;
 }
 
 .profile p {
@@ -789,8 +795,15 @@ footer {
   z-index: inherit;
 }
 
-.profile-img {
+.profile-img-pill {
   width: 223px;
+  border-radius: 4.625rem;
+}
+
+.profile-img-rect {
+  width: 223px;
+  border-radius: 1rem;
+
 }
 
 .profile-name {
@@ -799,8 +812,9 @@ footer {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: AIRFRAMES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .airframe-img {
-  // max-width: 416px;
+  max-width: 416px;
   width: 100%;
+  border-radius: 1rem;
 }
 
 .airframe-list {
