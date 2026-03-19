@@ -5,13 +5,13 @@
 /*  Light  */
 
 
-html,
-body {
-  height: 100%;
-  width: 100%;
+html, body {
+  // height: 100%;
+  width: 100vw;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -349,7 +349,7 @@ small {
   .history-timeline-line {
     grid-row-end: span 6;
   }
-  
+
   .history-timeline-circles {
     left: calc(1.5rem + ((100vw - 1.5rem - 1.5rem - (20px * 5)) / 6) / 2 - (2.125rem/2));
     // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
@@ -779,12 +779,12 @@ footer {
 .post-intro-short {
   text-align: center;
   padding-top: 1rem;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
 }
 
 .cta-banner {
   padding: 4.25rem 1.5rem 2.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   background: rgba(111, 15, 18, 0.03);
   background-image: url(images/assets/background-cta.svg);
   background-size: cover;
