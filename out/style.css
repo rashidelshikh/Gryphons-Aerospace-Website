@@ -302,6 +302,24 @@ small {
     right: calc(-100% - 4.5rem);
   }
 
+  .nav-trigger:checked ~ .nav-burger-logo {
+    transform: translate(-1rem, 0.5rem);
+  }
+
+  .nav_buttons {
+  font-size: 1.5rem!important;
+  }
+
+  /* ~~~~~~ TYPOGRAPHY ~~~~~~ */
+  p {
+    font-size: 1.125rem!important;
+  }
+
+  .tagline {
+    font-size: 1.5rem!important;
+    letter-spacing: -1.18px!important;
+  }
+
   /* ~~~~~~ GRID ~~~~~~ */
   .grid {
     padding: 0 1.5rem;
@@ -328,6 +346,10 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline-line {
+    grid-row-end: span 6;
+  }
+  
   .history-timeline-circles {
     left: calc(1.5rem + ((100vw - 1.5rem - 1.5rem - (20px * 5)) / 6) / 2 - (2.125rem/2));
     // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
@@ -409,6 +431,10 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline-line {
+    grid-row-end: span 6;
+  }
+
   .history-timeline-circles {
     left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)/2 - (2.125rem/2));
     // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
@@ -496,6 +522,10 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline-line {
+    grid-row-end: span 3;
+  }
+
   .history-timeline .col2 {
   margin-bottom: 9.688rem;
   }
@@ -529,6 +559,12 @@ nav {
   justify-content: space-between;
 }
 
+.nav-burger-logo {
+  z-index: 200;
+  position: relative;
+  transition: all 0.7s ease;
+}
+
 /* ______________ NAVIGATION MENU (burger) ______________ */
 #nav-trigger {
   display: none;
@@ -546,16 +582,16 @@ label[for="nav-trigger"] {
   display: flex;
   align-items: center;
   gap: 18px;
+  transition: all 0.2s ease;
 }
 
-// label[for="nav-trigger"]:hover {
-//   color: var(--brown);
-//   opacity: 0.9;
-// }
+label[for="nav-trigger"]:hover {
+  opacity: 0.8;
+}
 
 .burger, .burger-t, .burger-b {
   position: relative;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
   transform-origin: center;
 }
 
@@ -577,6 +613,7 @@ label[for="nav-trigger"] {
 .nav-trigger:checked~.nav_burger_content {
   right: 0;
 }
+
 
 .nav_burger_content {
   display: grid;
@@ -779,7 +816,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem 3.6rem;
-  // justify-content:flex-start;
+  align-items: center;
 }
 
 .profile {
@@ -918,7 +955,6 @@ footer {
 
 .history-timeline-line {
   text-align: center;
-  grid-row-end: span 3;
   position: relative;
 }
 

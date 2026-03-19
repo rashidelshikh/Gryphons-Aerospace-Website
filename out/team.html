@@ -32,10 +32,9 @@
         <p>Sorry, it seems like your device is too small to view this website.</p>
     </div>
     <nav class="nav_burger">
-        <a href="index.html"><img src="images/assets/logo/logo-nav.png" alt="Gryphon Aerospace Logo"
-                class="w-12 h-12"></a>
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger" onclick="toggleMenu();">
+        <a class="nav-burger-logo" href="index.html"><img src="images/assets/logo/logo-nav.png" alt="Gryphon Aerospace Logo" class="w-12 h-12"></a>
+        <label for="nav-trigger" onclick="toggleMenu();"">
                 <span class="smhide" id="nav-menu-text">MENU</span>
             <!-- <img src="images/assets/burger.svg"> -->
             <svg class="burger" width="27" height="27" viewBox="0 0 27 17" fill="none"
@@ -53,7 +52,6 @@
                 <li class="nav_burger_li"><a href="contact.html" class="nav_buttons">CONTACT</a></li>
             </ul>
         </div>
-
     </nav>
     <div class="grid team-intro">
         <div class="cell col2 md1 sm1 intro-text">
@@ -143,7 +141,7 @@
                         <p><small>Executive</small></p>
                     </div>
                     <div class="profile">
-                        <img src="images/team/profiles/profile-placeholder-1.jpg" class="img profile-img-pill">
+                        <img src="images/team/profiles/profile-placeholder.jpg" class="img profile-img-pill">
                         <img class="spaceline-profile-pill" src="images/team/profiles/spaceline-pill.svg">
                         <h3 class="profile-name">JOHN DOE</h3>
                         <p><small>Executive</small></p>
@@ -161,7 +159,7 @@
                         <p><small>Executive</small></p>
                     </div>
                     <div class="profile">
-                        <img src="images/team/profiles/profile-placeholder-2.jpg" class="img profile-img-rect">
+                        <img src="images/team/profiles/profile-placeholder.jpg" class="img profile-img-rect">
                         <img class="spaceline-profile-rect" src="images/team/profiles/spaceline-rect.svg">
                         <h3 class="profile-name">JESSICA KIM</h3>
                         <p><small>Executive</small></p>
@@ -211,231 +209,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <!-- <main class="min-h-screen bg-dark">
-        <nav class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-20"><a
-                        class="flex items-center space-x-3 text-white font-bold text-xl tracking-wider group" href="/">
-                        <div
-                            class="bg-gryphon-red/10 p-2 rounded-full border border-gryphon-red/20 group-hover:border-gryphon-red/50 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-rocket w-5 h-5 text-gryphon-red">
-                                <path
-                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
-                                </path>
-                                <path
-                                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
-                                </path>
-                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                            </svg></div><span>GRYPHONS <span class="text-gryphon-red">AERO</span></span>
-                    </a>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-1"><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/">Home</a><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/team">Meet the Team</a><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/airframes">Airframes</a><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/history">Competition History</a><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/contact">Contact</a></div>
-                    </div>
-                    <div class="md:hidden"><button
-                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
-                                <line x1="4" x2="20" y1="12" y2="12"></line>
-                                <line x1="4" x2="20" y1="6" y2="6"></line>
-                                <line x1="4" x2="20" y1="18" y2="18"></line>
-                            </svg></button></div>
-                </div>
-            </div>
-        </nav>
-        <div class="pt-32 pb-24 px-4 max-w-7xl mx-auto">
-            <div class="mb-16 text-center ">
-                <h2
-                    class="text-3xl md:text-5xl font-bold uppercase tracking-widest text-white inline-block relative pb-4">
-                    Our Team<span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-gryphon-red rounded-full shadow-[0_0_15px_rgba(194,4,48,0.5)]"></span>
-                </h2>
-                <p class="mt-6 text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">The minds behind the mission.
-                </p>
-            </div>
-            <div class="mb-24">
-                <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-gryphon-red pl-4">Executive Leadership
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div
-                        class="bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-gryphon-red/50 transition-all group">
-                        <div class="relative h-80"><img alt="Sarah Jenkins" loading="lazy" decoding="async"
-                                data-nimg="fill"
-                                class="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                                src="/images/team/placeholder.svg" />
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
-                            </div>
-                            <div class="absolute bottom-0 left-0 p-6 w-full">
-                                <h4 class="text-xl font-bold text-white">Sarah Jenkins</h4>
-                                <p class="text-gryphon-gold font-medium">Project Lead</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-gryphon-red/50 transition-all group">
-                        <div class="relative h-80"><img alt="David Chen" loading="lazy" decoding="async"
-                                data-nimg="fill"
-                                class="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                                src="/images/team/placeholder.svg" />
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
-                            </div>
-                            <div class="absolute bottom-0 left-0 p-6 w-full">
-                                <h4 class="text-xl font-bold text-white">David Chen</h4>
-                                <p class="text-gryphon-gold font-medium">Chief Engineer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-gryphon-red/50 transition-all group">
-                        <div class="relative h-80"><img alt="JESSICA Rose" loading="lazy" decoding="async"
-                                data-nimg="fill"
-                                class="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                                src="/images/team/placeholder.svg" />
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80">
-                            </div>
-                            <div class="absolute bottom-0 left-0 p-6 w-full">
-                                <h4 class="text-xl font-bold text-white">JESSICA Rose</h4>
-                                <p class="text-gryphon-gold font-medium">Propulsion Lead</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-gryphon-gold pl-4">General Members</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div
-                        class="bg-white/5 rounded-lg p-4 border border-white/5 hover:bg-white/10 transition-colors flex items-center gap-4">
-                        <div class="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/10">
-                            <img alt="Michael Chang" loading="lazy" decoding="async" data-nimg="fill"
-                                class="object-cover"
-                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                                src="/images/team/placeholder.svg" /></div>
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Michael Chang</h5>
-                            <p class="text-gray-400 text-xs">Aerodynamics Lead</p>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-white/5 rounded-lg p-4 border border-white/5 hover:bg-white/10 transition-colors flex items-center gap-4">
-                        <div class="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/10">
-                            <img alt="Jessica KIM" loading="lazy" decoding="async" data-nimg="fill"
-                                class="object-cover"
-                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                                src="/images/team/placeholder.jpg" /></div>
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Jessica KIM</h5>
-                            <p class="text-gray-400 text-xs">Avionics Engineer</p>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-white/5 rounded-lg p-4 border border-white/5 hover:bg-white/10 transition-colors flex items-center gap-4">
-                        <div class="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border border-white/10">
-                            <img alt="Robert Wilson" loading="lazy" decoding="async" data-nimg="fill"
-                                class="object-cover"
-                                style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-                                src="/images/team/placeholder.jpg" /></div>
-                        <div>
-                            <h5 class="text-white font-bold text-sm">Robert Wilson</h5>
-                            <p class="text-gray-400 text-xs">Recovery Specialist</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="bg-dark/80 backdrop-blur-sm border-t border-white/10 py-16 text-gray-400">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-2 text-white font-bold text-xl mb-6"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-rocket w-6 h-6 text-gryphon-red">
-                            <path
-                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
-                            </path>
-                            <path
-                                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
-                            </path>
-                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                        </svg><span>GRYPHONS <span class="text-gryphon-red">AERO</span></span></div>
-                    <p class="text-sm leading-relaxed max-w-xs text-gray-500">University of Guelph&#x27;s premier
-                        student design team for rocketry and unmanned aerial systems. Fostering engineering excellence
-                        through competition.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-wider">Contact</h4><a
-                        href="mailto:info@gryphonsaero.com"
-                        class="flex items-center gap-3 hover:text-gryphon-red transition-colors mb-2 text-sm"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-mail w-4 h-4">
-                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                        </svg> info@gryphonsaero.com</a>
-                    <div class="text-sm text-gray-500 mt-4">
-                        <p>Thornbrough Building</p>
-                        <p>University of Guelph</p>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-wider">Social</h4>
-                    <div class="flex gap-4"><a href="#"
-                            class="bg-white/5 p-2 rounded-full hover:bg-gryphon-red hover:text-white transition-all duration-300"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5">
-                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                            </svg></a><a href="#"
-                            class="bg-white/5 p-2 rounded-full hover:bg-gryphon-red hover:text-white transition-all duration-300"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5">
-                                <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                </path>
-                                <rect width="4" height="12" x="2" y="9"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg></a><a href="#"
-                            class="bg-white/5 p-2 rounded-full hover:bg-gryphon-red hover:text-white transition-all duration-300"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-twitter w-5 h-5">
-                                <path
-                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-                                </path>
-                            </svg></a></div>
-                </div>
-            </div>
-            <div
-                class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-                <p>© 2026 Gryphons Aerospace. All rights reserved.</p>
-                <div class="flex gap-4 mt-4 md:mt-0"><a class="hover:text-gray-400" href="#">Privacy Policy</a><a
-                        class="hover:text-gray-400" href="#">Terms of Service</a></div>
-            </div>
-        </footer>
-    </main> -->
     <script src="/_next/static/chunks/webpack-ee86d7cffc0f72f8.js" crossorigin="" async=""></script>
     <script>(self.__next_f = self.__next_f || []).push([0]); self.__next_f.push([2, null])</script>
     <script>self.__next_f.push([1, "1:HL[\"/_next/static/css/fb269774fc462dcd.css\",\"style\",{\"crossOrigin\":\"\"}]\n0:\"$L2\"\n"])</script>
