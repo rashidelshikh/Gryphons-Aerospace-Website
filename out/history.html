@@ -32,7 +32,7 @@
                 class="w-12 h-12"></a>
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger" onclick="toggleMenu();"">
-                <span id=" nav-menu-text">MENU</span>
+                <span class="smhide" id=" nav-menu-text">MENU</span>
             <img src="images/assets/burger.svg">
         </label>
         <div class="nav_burger_content">
@@ -46,41 +46,71 @@
         </div>
 
     </nav>
-    <div class="grid index-intro">
-        <div class="cell col2 md1 sm1 intro-text">
-            <p class="subtitle">WE ARE</p>
-            <h1>GRYPHON AEROSPACE</h1>
-            <img class="spaceline-h1" style="transform: translate(-68px, -82px);"
-                src="images/assets/spaceline-heading.svg">
-            <p class="tagline">University of Guelph's aerospace club</p>
-            <h3>ABOUT US</h3>
-            <p>Gryphon Aerospace is a student-design team based at the
-                University of Guelph. We are dedicated to designing, building, and launching high-powered
-                rockets and advanced unmanned aerial systems.
-                <br><br>
-                Our mission is to foster engineering excellence,
-                teamwork, and innovation within the aerospace field.
-            </p>
+    <div class="grid history-intro">
+        <div class="cell span8 md1 sm1 history-intro-text">
+            <div>
+                <p class="subtitle">WE ARE</p>
+                <h1>COMPETITION HISTORY</h1>
+                <img class="spaceline-h1" style="transform: translate(270px, -62px);"
+                    src="images/history/spaceline-history.svg">
+                <p class="tagline">From humble beginnings to high-altitude excellence</p>
+            </div>
+            <a href="#history-timeline"><img id="history-intro-arrow" src="images/assets/arrow-down.svg"></a>
+            
         </div>
-        <div class="cell col2 md1 sm1">
-            <img src="images/index/insta-3.jpg" class="img img-header">
+        <div class="cell col3 mdhide smhide">
         </div>
     </div>
-    <div class="grid index-team">
-        <div class="cell col6 mdhide smhide"></div>
-        <div class="cell span8 md1 sm1">
-            <div class="text-above-img">
-                <h3>OUR TEAM</h3>
-                <p>Gryphon Aerospace is a new club at Guelph aiming to explore the growing Canadian aerospace sector
-                    through international design competitions and team projects.
-                    Learn more about our team <a href="team.html" class="link">here</a>.
-                </p>
-            </div>
-
-            <img src="images/team/our-team.jpg" class="img img-border">
+    <div class="grid history-timeline" id="history-timeline">
+        <div class="cell col12 md12 sm6 history-timeline-line">
+            <img src="images/history/timeline-line.svg">
         </div>
-        <div class="cell col6 mdhide smhide"></div>
+        <div class="cell col2 mdspan11 smspan10">
+            <img src="images/history/timeline-circle.svg" class="history-timeline-circles">
+            <h4>2020-2022</h4>
+            <h3>HEADLINE</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat mattis ultrices. Nam hendrerit sodales turpis. Nam id metus et eros ullamcorper volutpat. Nulla facilisi. 
+                <br><br>
+                Aenean quis bibendum augue, ut consequat metus. Sed non nunc nec sem blandit porttitor at ut sapien. Morbi tempus sem metus, sit amet vehicula dolor efficitur in.
+                <br><br>
+                <a href="team.html" class="link">This is a link →</a>
+            </p>
+        </div>
+        <div class="cell span5 mdspan11 smspan10 history-timeline-images">
+            <img src="images/history/2020-2.jpg" class="history-timeline-img history-timeline-imgback">
+            <img src="images/history/2020-1.jpg" class="history-timeline-img history-timeline-imgfront">
 
+        </div>
+
+        <div class="cell col2 md2 sm2">
+            <h4>2023-2025</h4>
+            <h3>HEADLINE</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat mattis ultrices. Nam hendrerit sodales turpis. Nam id metus et eros ullamcorper volutpat. Nulla facilisi. 
+                <br><br>
+                Aenean quis bibendum augue, ut consequat metus. Sed non nunc nec sem blandit porttitor at ut sapien. Morbi tempus sem metus, sit amet vehicula dolor efficitur in.
+                <br><br>
+                <a href="team.html" class="link">This is a link →</a>
+            </p>
+        </div>
+        <div class="cell span5 md2 sm2 history-timeline-images">
+            <img src="images/history/2020-2.jpg" class="history-timeline-img history-timeline-imgback">
+            <img src="images/history/2020-1.jpg" class="history-timeline-img history-timeline-imgfront">
+        </div>
+
+        <div class="cell col2 md2 sm2">
+            <h4>2026-PRESENT</h4>
+            <h3>HEADLINE</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat mattis ultrices. Nam hendrerit sodales turpis. Nam id metus et eros ullamcorper volutpat. Nulla facilisi. 
+                <br><br>
+                Aenean quis bibendum augue, ut consequat metus. Sed non nunc nec sem blandit porttitor at ut sapien. Morbi tempus sem metus, sit amet vehicula dolor efficitur in.
+                <br><br>
+                <a href="team.html" class="link">This is a link →</a>
+            </p>
+        </div>
+        <div class="cell span5 md2 sm2 history-timeline-images">
+            <img src="images/history/2020-2.jpg" class="history-timeline-img history-timeline-imgback">
+            <img src="images/history/2020-1.jpg" class="history-timeline-img history-timeline-imgfront">
+        </div>
     </div>
     <footer class="grid">
         <div class="cell span10 md1 sm1">
@@ -93,8 +123,9 @@
                         src="images/assets/socials/ig-footer.svg" class="footer-socials-img"></a>
                 <a href="https://discord.gg/pTdnRmWk6U" target="_blank" rel="noopener noreferrer"><img
                         src="images/assets/socials/discord-footer.svg" class="footer-socials-img"></a>
-                <a href="https://www.linkedin.com/company/gryphon-aerospace-guelph/" target="_blank" rel="noopener noreferrer"><img
-                        src="images/assets/socials/linkedin-footer.svg" class="footer-socials-img"></a>
+                <a href="https://www.linkedin.com/company/gryphon-aerospace-guelph/" target="_blank"
+                    rel="noopener noreferrer"><img src="images/assets/socials/linkedin-footer.svg"
+                        class="footer-socials-img"></a>
             </div>
         </div>
         <div class="cell col6 mdspan8 sm1 footer_links">
@@ -110,215 +141,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <main class="min-h-screen bg-dark">
-        <nav class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex items-center justify-between h-20"><a
-                        class="flex items-center space-x-3 text-white font-bold text-xl tracking-wider group" href="/">
-                        <div
-                            class="bg-gryphon-red/10 p-2 rounded-full border border-gryphon-red/20 group-hover:border-gryphon-red/50 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-rocket w-5 h-5 text-gryphon-red">
-                                <path
-                                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
-                                </path>
-                                <path
-                                    d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
-                                </path>
-                                <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                                <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                            </svg></div><span>GRYPHONS <span class="text-gryphon-red">AERO</span></span>
-                    </a>
-                    <div class="hidden md:block">
-                        <div class="ml-10 flex items-baseline space-x-1"><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/">Home</a><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/team">Meet the Team</a><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/airframes">Airframes</a><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/history">Competition History</a><a
-                                class="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                href="/contact">Contact</a></div>
-                    </div>
-                    <div class="md:hidden"><button
-                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-menu w-6 h-6">
-                                <line x1="4" x2="20" y1="12" y2="12"></line>
-                                <line x1="4" x2="20" y1="6" y2="6"></line>
-                                <line x1="4" x2="20" y1="18" y2="18"></line>
-                            </svg></button></div>
-                </div>
-            </div>
-        </nav>
-        <div class="pt-32 pb-24 px-4 max-w-7xl mx-auto">
-            <div class="mb-16 text-center ">
-                <h2
-                    class="text-3xl md:text-5xl font-bold uppercase tracking-widest text-white inline-block relative pb-4">
-                    Our Journey<span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-gryphon-red rounded-full shadow-[0_0_15px_rgba(194,4,48,0.5)]"></span>
-                </h2>
-                <p class="mt-6 text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">From humble beginnings to
-                    high-altitude excellence.</p>
-            </div>
-            <div class="relative">
-                <div class="max-w-5xl mx-auto pb-12">
-                    <div class="flex flex-col md:flex-row items-center justify-between mb-16 w-full md:flex-row-reverse"
-                        style="opacity:0;transform:translateX(-50px)">
-                        <div class="hidden md:block md:w-5/12"></div>
-                        <div class="w-full md:w-2/12 flex justify-center relative py-4 md:py-0">
-                            <div
-                                class="w-4 h-4 bg-gryphon-red rounded-full z-10 shadow-[0_0_15px_#C20430] ring-4 ring-dark">
-                            </div>
-                            <div
-                                class="absolute top-4 bottom-[-5rem] w-0.5 bg-white/10 md:left-1/2 md:-ml-px h-[calc(100%+4rem)]">
-                            </div>
-                        </div>
-                        <div class="w-full md:w-5/12 pl-8 md:pl-0">
-                            <div
-                                class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gryphon-red/50 transition-colors backdrop-blur-sm relative overflow-hidden group">
-                                <div
-                                    class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                                    <span class="text-6xl font-black text-white">2023</span></div><span
-                                    class="text-gryphon-gold font-bold text-xl block mb-2">2023</span>
-                                <h3 class="text-2xl font-bold text-white mb-3">Team Founded</h3>
-                                <p class="text-gray-400">Gryphons Aerospace was established by a group of passionate
-                                    engineering students at the University of Guelph.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col md:flex-row items-center justify-between mb-16 w-full "
-                        style="opacity:0;transform:translateX(50px)">
-                        <div class="hidden md:block md:w-5/12"></div>
-                        <div class="w-full md:w-2/12 flex justify-center relative py-4 md:py-0">
-                            <div
-                                class="w-4 h-4 bg-gryphon-red rounded-full z-10 shadow-[0_0_15px_#C20430] ring-4 ring-dark">
-                            </div>
-                            <div
-                                class="absolute top-4 bottom-[-5rem] w-0.5 bg-white/10 md:left-1/2 md:-ml-px h-[calc(100%+4rem)]">
-                            </div>
-                        </div>
-                        <div class="w-full md:w-5/12 pl-8 md:pl-0">
-                            <div
-                                class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gryphon-red/50 transition-colors backdrop-blur-sm relative overflow-hidden group">
-                                <div
-                                    class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                                    <span class="text-6xl font-black text-white">2024</span></div><span
-                                    class="text-gryphon-gold font-bold text-xl block mb-2">2024</span>
-                                <h3 class="text-2xl font-bold text-white mb-3">First Launch</h3>
-                                <p class="text-gray-400">Successful launch of Gryphon I at the Spaceport America Cup,
-                                    reaching an altitude of 10,500 ft.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col md:flex-row items-center justify-between mb-16 w-full md:flex-row-reverse"
-                        style="opacity:0;transform:translateX(-50px)">
-                        <div class="hidden md:block md:w-5/12"></div>
-                        <div class="w-full md:w-2/12 flex justify-center relative py-4 md:py-0">
-                            <div
-                                class="w-4 h-4 bg-gryphon-red rounded-full z-10 shadow-[0_0_15px_#C20430] ring-4 ring-dark">
-                            </div>
-                            <div
-                                class="absolute top-4 bottom-[-5rem] w-0.5 bg-white/10 md:left-1/2 md:-ml-px h-[calc(100%+4rem)]">
-                            </div>
-                        </div>
-                        <div class="w-full md:w-5/12 pl-8 md:pl-0">
-                            <div
-                                class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gryphon-red/50 transition-colors backdrop-blur-sm relative overflow-hidden group">
-                                <div
-                                    class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                                    <span class="text-6xl font-black text-white">2025</span></div><span
-                                    class="text-gryphon-gold font-bold text-xl block mb-2">2025</span>
-                                <h3 class="text-2xl font-bold text-white mb-3">Expansion</h3>
-                                <p class="text-gray-400">Expanded into UAS development with the Sentinel project and
-                                    grew the team to over 40 members.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center mt-[-4rem] relative z-20">
-                    <div class="w-6 h-6 bg-gryphon-gold rounded-full shadow-[0_0_15px_#FFC72C] ring-4 ring-dark"></div>
-                </div>
-            </div>
-        </div>
-        <footer class="bg-dark/80 backdrop-blur-sm border-t border-white/10 py-16 text-gray-400">
-            <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-2 text-white font-bold text-xl mb-6"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-rocket w-6 h-6 text-gryphon-red">
-                            <path
-                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
-                            </path>
-                            <path
-                                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
-                            </path>
-                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                        </svg><span>GRYPHONS <span class="text-gryphon-red">AERO</span></span></div>
-                    <p class="text-sm leading-relaxed max-w-xs text-gray-500">University of Guelph&#x27;s premier
-                        student design team for rocketry and unmanned aerial systems. Fostering engineering excellence
-                        through competition.</p>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-wider">Contact</h4><a
-                        href="mailto:info@gryphonsaero.com"
-                        class="flex items-center gap-3 hover:text-gryphon-red transition-colors mb-2 text-sm"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-mail w-4 h-4">
-                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                        </svg> info@gryphonsaero.com</a>
-                    <div class="text-sm text-gray-500 mt-4">
-                        <p>Thornbrough Building</p>
-                        <p>University of Guelph</p>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-wider">Social</h4>
-                    <div class="flex gap-4"><a href="#"
-                            class="bg-white/5 p-2 rounded-full hover:bg-gryphon-red hover:text-white transition-all duration-300"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5">
-                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                            </svg></a><a href="#"
-                            class="bg-white/5 p-2 rounded-full hover:bg-gryphon-red hover:text-white transition-all duration-300"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5">
-                                <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                </path>
-                                <rect width="4" height="12" x="2" y="9"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg></a><a href="#"
-                            class="bg-white/5 p-2 rounded-full hover:bg-gryphon-red hover:text-white transition-all duration-300"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-twitter w-5 h-5">
-                                <path
-                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-                                </path>
-                            </svg></a></div>
-                </div>
-            </div>
-            <div
-                class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-                <p>© <!-- -->2026<!-- --> Gryphons Aerospace. All rights reserved.</p>
-                <div class="flex gap-4 mt-4 md:mt-0"><a class="hover:text-gray-400" href="#">Privacy Policy</a><a
-                        class="hover:text-gray-400" href="#">Terms of Service</a></div>
-            </div>
-        </footer>
-    </main>
     <script src="/_next/static/chunks/webpack-ee86d7cffc0f72f8.js" crossorigin="" async=""></script>
     <script>(self.__next_f = self.__next_f || []).push([0]); self.__next_f.push([2, null])</script>
     <script>self.__next_f.push([1, "1:HL[\"/_next/static/css/fb269774fc462dcd.css\",\"style\",{\"crossOrigin\":\"\"}]\n0:\"$L2\"\n"])</script>

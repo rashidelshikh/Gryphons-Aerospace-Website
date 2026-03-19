@@ -11,6 +11,11 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
 }
 
 ::selection {
@@ -78,13 +83,20 @@ h2 {
 }
 
 h3 {
-  // color: var(--brown);
   font-family: Anton;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
   margin-top: 2.375rem;
+}
+
+h4 {
+  font-family: Anton;
+  font-size: 1.313rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133%;
 }
 
 p {
@@ -193,7 +205,7 @@ small {
 .img {
   width: 100%;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
 }
 
 .img-header {
@@ -254,13 +266,22 @@ small {
     grid-column-end: span 1;
   }
 
+  .smspan10 {
+    grid-column-end: span 10;
+  }
+
   .smhide {
     display: none;
   }
 
+  /* ~~~~~~ GENERAL ~~~~~~ */
+  body {
+    overflow-x: hidden;
+  }
+
   /* ~~~~~~ GRID ~~~~~~ */
   .grid {
-    padding: 0 2.7rem;
+    padding: 0 1.5rem;
     grid-gap: 20px;
   }
 
@@ -269,9 +290,27 @@ small {
   line-height: 100%;
   }
 
+  /* ~~~~~~ PAGES: TEAM ~~~~~~ */
+  .team-list {
+    padding: 4.1rem 0rem 0 0rem;
+  }
+
+  .role-profiles {
+    justify-content: space-around;
+  }
+
   /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
   .airframe-list {
   grid-gap: 2.6rem 0;
+  }
+
+  /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline-circles {
+    left: calc(2.7rem - (2.125rem/2) + (0.188rem/2));
+  }
+
+  .history-timeline-line {
+    text-align: left!important;
   }
 }
 
@@ -310,6 +349,14 @@ small {
     grid-column-end: span 10;
   }
 
+  .mdspan11 {
+    grid-column-end: span 11;
+  }
+
+  .mdhide {
+    display: none;
+  }
+
   /* ~~~~~~ GRID ~~~~~~ */
   .grid {
     padding: 0 4.375rem;
@@ -321,9 +368,23 @@ small {
   line-height: 140%;
   }
 
+  /* ~~~~~~ PAGES: TEAM ~~~~~~ */
+  .team-list {
+    padding: 4.1rem 1rem 0 1rem;
+  }
+
+  .role-profiles {
+    justify-content: space-evenly;
+  }
+
   /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
   .airframe-list {
   grid-gap: 2rem;
+  }
+
+  /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline-circles {
+    left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)/2 - (2.125rem/2));
   }
 }
 
@@ -354,12 +415,20 @@ small {
     grid-column-end: span 1;
   }
 
+  .span5 {
+    grid-column-end: span 5;
+  }
+
   .span8 {
     grid-column-end: span 8;
   }
 
   .span10 {
     grid-column-end: span 10;
+  }
+
+  .mdhide {
+    display: block;
   }
 
   /* ~~~~~~ GRID ~~~~~~ */
@@ -373,9 +442,27 @@ small {
   line-height: 173%;
   }
 
+  /* ~~~~~~ PAGES: TEAM ~~~~~~ */
+  .team-list {
+    padding: 4.1rem 2rem 0 2rem;
+  }
+
+  .role-profiles {
+    justify-content: flex-start;
+  }
+
   /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
   .airframe-list {
   grid-gap: 2.8rem;
+  }
+
+  /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline .col2 {
+  margin-bottom: 9.688rem;
+  }
+  
+  .history-timeline-circles {
+    left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)/2 - (2.125rem/2));
   }
 }
 
@@ -599,7 +686,6 @@ footer {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: OUR TEAM ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .team-list {
   text-align: left;
-  padding: 4.1rem 2rem 0 2rem;
 }
 
 .role-list {
@@ -611,7 +697,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem 3.6rem;
-  // justify-content: space-between;
+  // justify-content:flex-start;
 }
 
 .profile {
@@ -688,4 +774,73 @@ footer {
 
 .contact-group .button {
   margin-top: 3.3rem;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.history-intro {
+  background-image: url(images/history/history-bg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 14rem;
+  padding-bottom: 4rem;
+}
+
+.history-intro-text {
+  padding-left: 3.2rem;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#history-intro-arrow {
+  width: 2.063rem;
+}
+
+.history-timeline {
+  padding-top: 3.75rem;
+  padding-bottom: 6rem;
+}
+
+#history-timeline {
+  scroll-margin-top: 4rem;
+}
+
+.history-timeline-line {
+  text-align: center;
+  grid-row-end: span 3;
+}
+
+.history-timeline-line-svg {
+  height: 100%;
+  width: 100%;
+}
+
+.history-timeline-circles {
+  position: absolute;
+  width: 2.125rem;
+}
+
+.history-timeline-images {
+  text-align: center;
+  position: relative;
+}
+
+.history-timeline-img {
+  object-fit: cover;
+  border-radius: 0.688rem;
+  width: 21.938rem;
+}
+
+.history-timeline-imgfront {
+  transform: rotate(0deg);
+  position: inherit;
+  top: calc(20%);
+}
+
+.history-timeline-imgback {
+  transform: rotate(2.96deg) translateX(10%);
+  position: absolute;
+  top: calc(10%);
 }
