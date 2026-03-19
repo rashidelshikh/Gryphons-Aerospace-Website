@@ -223,6 +223,12 @@ small {
   z-index: inherit;
 }
 
+.spaceline-body {
+  position: absolute;
+  transform: translate(-27px, -35px);
+  z-index: inherit;
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GRID LAYOUT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .grid {
@@ -867,6 +873,7 @@ footer {
   box-sizing: border-box;
   padding-top: 14rem;
   padding-bottom: 4rem;
+  z-index: 10;
 }
 
 .history-intro-text {
@@ -893,17 +900,29 @@ footer {
 .history-timeline-line {
   text-align: center;
   grid-row-end: span 3;
+  position: relative;
 }
 
 .history-timeline-line-svg {
   height: 100%;
   width: 100%;
+  z-index: -4!important;
+}
+
+.history-timeline-follow-circle {
+  position: fixed;
+  width: 0.875rem;
+  top: 50%;
+  transform: translateX(-0.5315rem);
+  z-index: -1;
+
 }
 
 .history-timeline-circles {
   position: absolute;
   width: 2.125rem;
   transform: translateY(-0.2rem);
+  z-index: 6;
 }
 
 .history-timeline-images {
