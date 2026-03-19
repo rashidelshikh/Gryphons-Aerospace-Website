@@ -1,5 +1,5 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADING 1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ COLOURS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ HEADING 2 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* ~~~~~~~~~~~~~~ COLOURS ~~~~~~~~~~~~~~ */
 /*  Light  */
@@ -241,7 +241,7 @@ small {
 }
 
 /* xs - device is too small */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 280px) {
   html, body {
     overflow: hidden;
   }
@@ -288,6 +288,12 @@ small {
   /* ~~~~~~ GENERAL ~~~~~~ */
   body {
     overflow-x: hidden;
+  }
+
+  /* ~~~~~~ NAV ~~~~~~ */
+  .nav_burger_content {
+    width: calc(100% - 4.5rem);
+    right: calc(-100% - 4.5rem);
   }
 
   /* ~~~~~~ GRID ~~~~~~ */
@@ -374,6 +380,12 @@ small {
     grid-gap: 20px;
   }
 
+  /* ~~~~~~ NAV ~~~~~~ */
+  .nav_burger_content {
+    width: 280px;
+    right: calc(-280px - 4.5rem);
+  }
+
   /* ~~~~~~ FOOTER ~~~~~~ */
   .footer_buttons {
   line-height: 140%;
@@ -446,6 +458,12 @@ small {
   .grid {
     padding: 0 4.375rem;
     grid-gap: 20px;
+  }
+
+  /* ~~~~~~ NAV ~~~~~~ */
+  .nav_burger_content {
+    width: 280px;
+    right: calc(-280px - 4.5rem);
   }
 
   /* ~~~~~~ FOOTER ~~~~~~ */
@@ -556,10 +574,10 @@ label[for="nav-trigger"]:hover {
   margin: 0;
   padding: 7rem 2.25rem 2.25rem 2.25rem;
 
-  width: 280px;
+  // width: 280px;
   height: 100vh;
   position: fixed;
-  right: calc(-280px - 4.5rem);
+  // right: calc(-280px - 4.5rem);
   background: var(--grey-100);
   transition: all 0.5s ease;
 }
@@ -652,7 +670,8 @@ footer {
   opacity: 0.7;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SPECIAL INSTANCES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BROWSER TOO SMALL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .browser-too-small {
   position: absolute;
   width: 100%;
@@ -667,6 +686,28 @@ footer {
   flex-direction: column;
   justify-content: center;
   display: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGE COULDN'T BE FOUND ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.error-404 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 7% 8%;
+  background-color: var(--white);
+  color: var(--brown);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.404-buttons {
+  text-decoration: none;
+  color: var(--brown);
+  transition: all 0.15s ease-out;
+  font-size: 18px!important;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
