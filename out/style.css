@@ -888,6 +888,23 @@ footer {
 
 #history-intro-arrow {
   width: 2.063rem;
+  position: relative;
+}
+
+#history-intro-arrow {
+  transform: translateY(0.1rem);
+}
+
+#history-intro-arrow, .arrow-down-t, .arrow-down-b {
+  transition: all 0.3s ease;
+}
+
+#history-intro-arrow:hover .arrow-down-t {
+  transform: translateY(0.06rem);
+}
+
+#history-intro-arrow:hover .arrow-down-b {
+  transform: translateY(0.11rem);
 }
 
 .history-timeline {
