@@ -323,11 +323,8 @@ small {
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
   .history-timeline-circles {
-    left: calc(2.7rem - (2.125rem/2) + (0.188rem/2));
-  }
-
-  .history-timeline-line {
-    text-align: left!important;
+    left: calc(1.5rem + ((100vw - 1.5rem - 1.5rem - (20px * 5)) / 6) / 2 - (2.125rem/2));
+    // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
   }
 }
 
@@ -408,6 +405,8 @@ small {
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
   .history-timeline-circles {
     left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)/2 - (2.125rem/2));
+    // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
+
   }
 }
 
@@ -492,6 +491,7 @@ small {
   
   .history-timeline-circles {
     left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)/2 - (2.125rem/2));
+    // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
   }
 }
 
@@ -733,7 +733,7 @@ footer {
 }
 
 .cta-banner {
-  padding: 4.25rem 0 2.6rem;
+  padding: 4.25rem 1.5rem 2.6rem;
   margin-bottom: 2rem;
   background: rgba(111, 15, 18, 0.03);
   background-image: url(images/assets/background-cta.svg);
@@ -889,6 +889,7 @@ footer {
 .history-timeline-circles {
   position: absolute;
   width: 2.125rem;
+  transform: translateY(-0.2rem);
 }
 
 .history-timeline-images {
