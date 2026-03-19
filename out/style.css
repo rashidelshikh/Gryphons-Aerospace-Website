@@ -346,6 +346,10 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline-line {
+    grid-row-end: span 6;
+  }
+  
   .history-timeline-circles {
     left: calc(1.5rem + ((100vw - 1.5rem - 1.5rem - (20px * 5)) / 6) / 2 - (2.125rem/2));
     // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
@@ -427,6 +431,10 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline-line {
+    grid-row-end: span 6;
+  }
+
   .history-timeline-circles {
     left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)/2 - (2.125rem/2));
     // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
@@ -514,6 +522,10 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-timeline-line {
+    grid-row-end: span 3;
+  }
+
   .history-timeline .col2 {
   margin-bottom: 9.688rem;
   }
@@ -804,7 +816,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem 3.6rem;
-  // justify-content:flex-start;
   align-items: center;
 }
 
@@ -944,7 +955,6 @@ footer {
 
 .history-timeline-line {
   text-align: center;
-  grid-row-end: span 3;
   position: relative;
 }
 
