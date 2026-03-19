@@ -240,6 +240,17 @@ small {
   grid-column-end: span 12;
 }
 
+/* xs - device is too small */
+@media only screen and (max-width: 320px) {
+  html, body {
+    overflow: hidden;
+  }
+  
+  .browser-too-small {
+    display: flex!important;
+  }
+}
+
 /* up to 600px typically phone */
 @media only screen and (max-width: 600px) {
   .sm1 {
@@ -639,6 +650,23 @@ footer {
 
 .footer-socials-img:hover {
   opacity: 0.7;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.browser-too-small {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 10%;
+  background-color: var(--white);
+  color: var(--brown);
+  z-index: 400;
+  text-align: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
