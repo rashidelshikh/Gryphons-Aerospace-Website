@@ -548,14 +548,16 @@ label[for="nav-trigger"] {
   gap: 18px;
 }
 
-label[for="nav-trigger"]:hover {
-  // line-height: 0.25;
-  color: var(--brown);
-}
+// label[for="nav-trigger"]:hover {
+//   color: var(--brown);
+//   opacity: 0.9;
+// }
 
 .burger, .burger-t, .burger-b {
   position: relative;
-  transition: all 0.4s ease;}
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
 
 .label[for="nav-trigger"]:hover .burger-t {
   transform: rotate(3deg);
