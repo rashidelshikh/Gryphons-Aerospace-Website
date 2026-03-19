@@ -1,0 +1,4 @@
+<svg class="burger" width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect id="burger-t" class="burger-t" width="27" height="8" fill="#261F1F"/>
+<rect id="burger-b" class="burger-b" y="9" width="27" height="8" fill="#261F1F"/>
+</svg>
