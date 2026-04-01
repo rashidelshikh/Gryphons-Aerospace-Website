@@ -1,61 +1,74 @@
+"use client";
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SectionHeader from '@/components/SectionHeader';
-import { Mail, Instagram, Linkedin, Twitter, Users, Rocket } from 'lucide-react';
 
-export default function Contact() {
+export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-dark">
+        <main className="min-h-screen bg-[#F9F9F9] flex flex-col">
             <Navbar />
-            <div className="pt-32 pb-24 px-4 max-w-7xl mx-auto">
-                <SectionHeader title="Contact Us" subtitle="Get in touch with the Gryphons Aerospace team." />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    {/* Recruitment */}
-                    <div className="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gryphon-red/50 transition-all hover:-translate-y-2 group">
-                        <div className="bg-gryphon-red/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-gryphon-red/30 group-hover:bg-gryphon-red/30 transition-colors">
-                            <Users className="w-8 h-8 text-gryphon-red" />
+            {/* Header Section */}
+            <section className="pt-40 pb-20 px-4 md:px-12 max-w-7xl mx-auto w-full flex-grow">
+                <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+                    {/* Left Column */}
+                    <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
+                        <SectionHeader 
+                            title="CONTACT US" 
+                            subtitle="University of Guelph's aerospace club"
+                            className="!mb-8 origin-left" 
+                        />
+                        
+                        <div className="text-gray-700 text-lg space-y-6 leading-relaxed font-medium mb-16">
+                            <p>
+                                Gryphon Aerospace is a new club at Guelph aiming to explore the growing Canadian aerospace sector through international design competitions and team projects.
+                            </p>
+                            <p>
+                                On our team, students from every discipline will develop skills in mechanical, electrical and computer engineering in a supportive team environment.
+                            </p>
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Student Recruitment</h3>
-                        <p className="text-gray-400 mb-8 leading-relaxed">
-                            Are you a University of Guelph student passionate about aerospace? We recruit for technical and operations roles at the beginning of each semester.
-                        </p>
-                        <a href="mailto:recruitment@gryphonsaero.com" className="inline-flex items-center gap-2 text-gryphon-gold font-bold hover:text-white transition-colors">
-                            <Mail className="w-5 h-5" /> recruitment@gryphonsaero.com
-                        </a>
+
+                        {/* For Students Block */}
+                        <div className="mb-16 w-full">
+                            <h3 className="font-heading text-4xl md:text-5xl mb-6 tracking-wider uppercase text-gray-900">FOR STUDENTS</h3>
+                            <div className="text-gray-600 text-lg leading-relaxed font-medium mb-8 space-y-4">
+                                <p>Are you a University of Guelph student passionate about aerospace? We recruit for technical and operations roles at the beginning of each semester.</p>
+                                <p>Donec nec massa lacus. Ut nisl dolor, porttitor sit amet lorem sed, bibendum pulvinar arcu. Duis at egestas velit, vel gravida dolor. Sed quam tellus eleifend.</p>
+                            </div>
+                            <a href="#" className="inline-block bg-gryphon-red hover:bg-[#a00327] text-white font-black uppercase tracking-widest px-10 py-4 rounded-full text-base transition-transform hover:scale-105 shadow-md">
+                                Apply Now
+                            </a>
+                        </div>
+
+                        {/* For Sponsors Block */}
+                        <div className="w-full">
+                            <h3 className="font-heading text-4xl md:text-5xl mb-6 tracking-wider uppercase text-gray-900">FOR SPONSORS</h3>
+                            <div className="text-gray-600 text-lg leading-relaxed font-medium mb-8 space-y-4">
+                                <p>Partner with us to support the next generation of aerospace engineers. We offer various sponsorship packages with branding and recruitment benefits.</p>
+                                <p>Donec nec massa lacus. Ut nisl dolor, porttitor sit amet lorem sed, bibendum pulvinar arcu <a href="mailto:email@gmail.com" className="text-gryphon-red underline hover:text-[#a00327] font-bold">email@gmail.com</a> duis at egestas velit, vel gravida dolor sed quam tellus.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Sponsorship */}
-                    <div className="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gryphon-gold/50 transition-all hover:-translate-y-2 group">
-                        <div className="bg-gryphon-gold/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-gryphon-gold/30 group-hover:bg-gryphon-gold/30 transition-colors">
-                            <Rocket className="w-8 h-8 text-gryphon-gold" />
+                    {/* Right Column */}
+                    <div className="w-full lg:w-1/2 sticky top-32">
+                        <div className="relative aspect-[4/5] w-full max-w-xl ml-auto rounded-[32px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.15)] border-8 border-white group">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-gray-200 to-gray-100 flex items-center justify-center text-gray-400 font-medium text-xl transition-transform duration-700 group-hover:scale-105">
+                                <span>[ Contact Hero Image ]</span>
+                            </div>
+                            <img 
+                                src="/images/contact/contact-hero.jpg" 
+                                alt="Gryphon Aerospace Team working" 
+                                className="object-cover w-full h-full relative z-10 transition-transform duration-700 group-hover:scale-105"
+                                onError={(e) => { e.currentTarget.style.opacity = '0' }}
+                            />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-4">Sponsorship Inquiries</h3>
-                        <p className="text-gray-400 mb-8 leading-relaxed">
-                            Partner with us to support the next generation of aerospace engineers. We offer various sponsorship packages with branding and recruitment benefits.
-                        </p>
-                        <a href="mailto:sponsorship@gryphonsaero.com" className="inline-flex items-center gap-2 text-gryphon-gold font-bold hover:text-white transition-colors">
-                            <Mail className="w-5 h-5" /> sponsorship@gryphonsaero.com
-                        </a>
                     </div>
                 </div>
+            </section>
 
-                {/* Socials */}
-                <div className="mt-24 text-center">
-                    <h3 className="text-xl font-bold text-white mb-8">Follow Our Progress</h3>
-                    <div className="flex justify-center gap-6">
-                        <a href="#" className="bg-white/5 p-4 rounded-full hover:bg-gryphon-red hover:text-white hover:scale-110 transition-all duration-300 border border-white/10">
-                            <Instagram className="w-8 h-8" />
-                        </a>
-                        <a href="#" className="bg-white/5 p-4 rounded-full hover:bg-[#0077b5] hover:text-white hover:scale-110 transition-all duration-300 border border-white/10">
-                            <Linkedin className="w-8 h-8" />
-                        </a>
-                        <a href="#" className="bg-white/5 p-4 rounded-full hover:bg-black hover:text-white hover:scale-110 transition-all duration-300 border border-white/10">
-                            <Twitter className="w-8 h-8" />
-                        </a>
-                    </div>
-                </div>
-            </div>
+            {/* Connect With Us Footer applies globally */}
             <Footer />
         </main>
     );

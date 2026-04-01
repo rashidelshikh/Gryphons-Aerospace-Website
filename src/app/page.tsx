@@ -1,77 +1,72 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
-import { ArrowRight, ChevronDown } from 'lucide-react';
 import SectionHeader from '@/components/SectionHeader';
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-dark">
+        <main className="min-h-screen bg-[#F9F9F9] flex flex-col">
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
-                {/* Background Image / Overlay */}
-                <div className="absolute inset-0 z-0">
-                    {/* Placeholder for hero background */}
-                    <div className="absolute inset-0 bg-[url('/images/team/placeholder.svg')] bg-cover bg-center opacity-30" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark" />
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#121212_100%)]" />
-                </div>
-
-                <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-                    <h1 className="text-5xl md:text-8xl font-black text-white tracking-tight mb-6 drop-shadow-2xl">
-                        GRYPHONS <span className="text-transparent bg-clip-text bg-gradient-to-r from-gryphon-red to-orange-600">AEROSPACE</span>
-                    </h1>
-                    <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-10 font-light tracking-wide">
-                        Pushing the boundaries of student rocketry and autonomous flight.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link
-                            href="/airframes"
-                            className="group bg-gryphon-red hover:bg-red-700 text-white px-8 py-3 rounded-full font-bold transition-all flex items-center justify-center gap-2 hover:gap-3"
-                        >
-                            View Airframes <ArrowRight className="w-5 h-5" />
-                        </Link>
-                        <Link
-                            href="/team"
-                            className="group bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-3 rounded-full font-bold transition-all backdrop-blur-sm"
-                        >
-                            Meet the Team
-                        </Link>
+            <section className="pt-40 pb-20 px-4 md:px-12 max-w-7xl mx-auto w-full flex-grow">
+                <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                    {/* Left Column */}
+                    <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
+                        <div className="mb-4">
+                            <SectionHeader title="GRYPHON AEROSPACE" className="!mb-6 scale-90 origin-left md:scale-100" />
+                        </div>
+                        
+                        <h3 className="text-xl md:text-2xl text-gray-600 mb-12">
+                            University of Guelph&apos;s aerospace club
+                        </h3>
+                        
+                        <h4 className="font-heading text-4xl mb-4 tracking-wider uppercase text-gray-900">ABOUT US</h4>
+                        <div className="text-gray-700 text-lg space-y-6 leading-relaxed font-medium">
+                            <p>
+                                Gryphons Aerospace is a student-design team based at the University of Guelph. We are dedicated to designing, building, and launching high-powered rockets and advanced unmanned aerial systems.
+                            </p>
+                            <p>
+                                Our mission is to foster engineering excellence, teamwork, and innovation within the aerospace field.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
-                <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-gray-400">
-                    <ChevronDown className="w-8 h-8" />
+                    {/* Right Column */}
+                    <div className="w-full lg:w-1/2">
+                        <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-4 border-white">
+                            {/* Fallback image background */}
+                            <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500 font-medium">
+                                <span>[ Hero Image Placeholder ]</span>
+                            </div>
+                            {/* Try to load standard image, will fallback to above if fails */}
+                            <img 
+                                src="/images/hero-placeholder.jpg" 
+                                alt="Gryphon Aerospace Hero" 
+                                className="object-cover w-full h-full relative z-10"
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            {/* About Section */}
-            <section className="py-24 px-4 bg-dark relative">
-                <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            {/* Our Team Section */}
+            <section className="py-24 px-4 md:px-12 max-w-6xl mx-auto text-center w-full">
+                <h2 className="text-6xl md:text-7xl font-heading tracking-wide mb-6 text-gray-900">OUR TEAM</h2>
+                <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed">
+                    Gryphon Aerospace is a new club at Guelph aiming to explore the growing Canadian aerospace sector through international design competitions and team projects.
+                </p>
 
-                <div className="max-w-4xl mx-auto text-center">
-                    <SectionHeader title="About Us" />
-
-                    <div className="prose prose-lg prose-invert mx-auto text-gray-300">
-                        <p className="text-xl leading-relaxed">
-                            &quot;Gryphons Aerospace is a student-design team based at the University of Guelph. We are dedicated to designing, building, and launching high-powered rockets and advanced unmanned aerial systems. Our mission is to foster engineering excellence, teamwork, and innovation within the aerospace field.&quot;
-                        </p>
+                <div className="relative aspect-[16/9] w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.15)] border-4 border-white">
+                    {/* Fallback image background */}
+                    <div className="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-500 font-medium text-xl">
+                        <span>[ Team Photo Placeholder ]</span>
                     </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                        {[
-                            { number: '10k', label: 'Ft Apogee Goal' },
-                            { number: '40+', label: 'Team Members' },
-                            { number: '2', label: 'Active Projects' },
-                        ].map((stat, idx) => (
-                            <div key={idx} className="bg-white/5 border border-white/10 p-8 rounded-xl hover:border-gryphon-red/30 transition-colors">
-                                <div className="text-5xl font-black text-white mb-2">{stat.number}</div>
-                                <div className="text-gryphon-gold font-bold uppercase tracking-wider text-sm">{stat.label}</div>
-                            </div>
-                        ))}
-                    </div>
+                    {/* Try to load standard image, will fallback to above if fails */}
+                    <img 
+                        src="/images/team-placeholder.jpg" 
+                        alt="Gryphon Aerospace Team" 
+                        className="object-cover w-full h-full relative z-10"
+                    />
                 </div>
             </section>
 

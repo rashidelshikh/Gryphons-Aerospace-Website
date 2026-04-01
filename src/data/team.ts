@@ -3,50 +3,57 @@ export type TeamMember = {
     name: string;
     role: string;
     image: string;
-    category: 'exec' | 'general';
+    category: 'president' | 'vp' | 'exec';
 };
 
 export const team: TeamMember[] = [
     {
         id: '1',
-        name: 'Sarah Jenkins',
-        role: 'Project Lead',
-        image: '/images/team/placeholder.svg',
-        category: 'exec',
+        name: 'Daniel SURNAME',
+        role: 'President',
+        image: '/images/team/placeholder.jpg',
+        category: 'president',
     },
     {
         id: '2',
-        name: 'David Chen',
-        role: 'Chief Engineer',
-        image: '/images/team/placeholder.svg',
-        category: 'exec',
+        name: 'Raell Trinidade',
+        role: 'Vice President',
+        image: '/images/team/placeholder.jpg',
+        category: 'vp',
     },
     {
         id: '3',
-        name: 'Emily Rose',
-        role: 'Propulsion Lead',
-        image: '/images/team/placeholder.svg',
+        name: 'Steven Au',
+        role: 'Design Lead',
+        image: '/images/team/placeholder.jpg',
         category: 'exec',
     },
     {
         id: '4',
-        name: 'Michael Chang',
-        role: 'Aerodynamics Lead',
-        image: '/images/team/placeholder.svg',
-        category: 'general',
+        name: 'Alex Wingate',
+        role: 'Design Captain',
+        image: '/images/team/placeholder.jpg',
+        category: 'exec',
     },
     {
         id: '5',
-        name: 'Jessica Smith',
-        role: 'Avionics Engineer',
+        name: 'Maitry',
+        role: 'Manufacturing Lead',
         image: '/images/team/placeholder.jpg',
-        category: 'general',
+        category: 'exec',
     },
     {
         id: '6',
-        name: 'Robert Wilson',
-        role: 'Recovery Specialist',
+        name: 'Arseniy',
+        role: 'Legal Officer',
         image: '/images/team/placeholder.jpg',
-        category: 'general',
+        category: 'exec',
+    },
+    {
+        id: '7',
+        name: 'Eric',
+        role: 'Flight Instructor',
+        image: '/images/team/placeholder.jpg',
+        category: 'exec',
     },
 ];

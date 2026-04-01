@@ -1,7 +1,6 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+
 import { Airframe } from '@/data/airframes';
-import Image from 'next/image';
 
 type AirframeCardProps = {
     airframe: Airframe;
@@ -9,36 +8,24 @@ type AirframeCardProps = {
 
 export default function AirframeCard({ airframe }: AirframeCardProps) {
     return (
-        <motion.div
-            whileHover={{ y: -10, boxShadow: '0 10px 30px -10px rgba(194, 4, 48, 0.3)' }}
-            className="bg-white/5 border border-white/10 rounded-xl overflow-hidden backdrop-blur-sm group"
-        >
-            <div className="relative h-64 overflow-hidden">
-                {/* Placeholder background if image load fails or is missing */}
-                <div className="absolute inset-0 bg-gray-800/50" />
-
-                {/* Using standard img tag if strict static export validation fails with next/image without specific loader, 
-            but unoptimized: true in next.config.mjs allows next/image. 
-            We'll use next/image with unoptimized config. */}
-                <Image
+        <div className="bg-gradient-to-b from-white to-gray-100 rounded-[40px] overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col items-center p-8 pb-10 transition-transform duration-300 hover:-translate-y-2">
+            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-8 bg-transparent">
+                <div className="absolute inset-0 bg-gray-200/50 flex items-center justify-center text-gray-400 font-medium text-sm z-0 rounded-3xl">Missing Image</div>
+                <img
                     src={airframe.image}
                     alt={airframe.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-contain w-full h-full relative z-10 drop-shadow-xl p-4"
+                    onError={(e) => { e.currentTarget.style.opacity = '0' }}
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-80" />
-                <div className="absolute bottom-4 left-4 z-10">
-                    <span className={`inline-block px-3 py-1 text-xs font-bold rounded-full mb-2 uppercase tracking-wide ${airframe.status === 'Competed' ? 'bg-gryphon-gold text-dark-black' : 'bg-blue-600/80 text-white backdrop-blur-sm'
-                        }`}>
-                        {airframe.status}
-                    </span>
-                    <h3 className="text-2xl font-bold text-white">{airframe.name}</h3>
-                </div>
             </div>
-            <div className="p-6">
-                <p className="text-gray-400 leading-relaxed">{airframe.description}</p>
-            </div>
-        </motion.div>
+            
+            <h3 className="text-4xl font-heading text-gray-900 uppercase tracking-widest text-center mb-3">
+                {airframe.name}
+            </h3>
+            
+            <p className="text-gray-500 text-sm md:text-base text-center leading-relaxed font-medium px-2">
+                {airframe.description}
+            </p>
+        </div>
     );
 }

@@ -7,65 +7,52 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Meet the Team', href: '/team' },
-    { name: 'Airframes', href: '/airframes' },
+    { name: 'Our Airframes', href: '/airframes' },
     { name: 'Competition History', href: '/history' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact Us', href: '/contact' },
 ];
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md border-b border-white/10">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
-                    <Link href="/" className="flex items-center space-x-3 text-white font-bold text-xl tracking-wider group">
-                        <div className="bg-gryphon-red/10 p-2 rounded-full border border-gryphon-red/20 group-hover:border-gryphon-red/50 transition-colors">
-                            <Rocket className="w-5 h-5 text-gryphon-red" />
+                    <Link href="/" className="flex items-center space-x-3 text-black font-heading text-3xl md:text-4xl tracking-normal group">
+                        <div className="bg-gryphon-red text-white p-2 rounded-full transition-transform group-hover:scale-110">
+                            <Rocket className="w-5 h-5" />
                         </div>
-                        <span>GRYPHONS <span className="text-gryphon-red">AERO</span></span>
+                        <span className="opacity-0 w-0 md:opacity-100 md:w-auto overflow-hidden transition-all duration-300">
+                            GRYPHONS <span className="text-gryphon-red">AEROSPACE</span>
+                        </span>
                     </Link>
 
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-1">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-gray-300 hover:text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-white/5 active:scale-95"
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="md:hidden">
-                        <button
-                            onClick={() => setIsOpen(!isOpen)}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
-                        >
-                            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                        </button>
-                    </div>
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="flex items-center gap-2 font-heading tracking-widest text-2xl hover:text-gryphon-red transition-colors"
+                    >
+                        <span>MENU</span>
+                        {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+                    </button>
                 </div>
             </div>
 
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        className="absolute top-20 left-0 right-0 bg-white shadow-2xl border-b border-gray-100"
                     >
-                        <div className="px-4 pt-2 pb-6 space-y-1">
+                        <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col items-end gap-6">
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="text-gray-300 hover:text-white block px-3 py-3 rounded-md text-base font-medium hover:bg-white/10 border-l-2 border-transparent hover:border-gryphon-red transition-all"
+                                    className="text-4xl md:text-6xl font-black uppercase text-gray-900 hover:text-gryphon-red transition-all tracking-tighter hover:translate-x-[-10px]"
                                 >
                                     {link.name}
                                 </Link>
