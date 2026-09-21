@@ -146,6 +146,7 @@ small {
   font-weight: 400;
   line-height: 133%; /* 42.56px */
   letter-spacing: -1.28px;
+  opacity: 0.75;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BUTTONS & LINKS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -287,6 +288,10 @@ small {
     grid-column-end: span 10;
   }
 
+  .smspan11 {
+    grid-column-end: span 11;
+  }
+
   .smhide {
     display: none;
   }
@@ -318,7 +323,7 @@ small {
 
   /* ~~~~~~ GRID ~~~~~~ */
   .grid {
-    padding: 0 1.5rem;
+    padding: 0 0.75rem;
     grid-gap: 20px;
   }
 
@@ -342,12 +347,21 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-intro-text {
+    padding-left: 0rem;
+  }
   .history-timeline-line {
-    grid-row-end: span 6;
+    grid-row-end: span 2;
+  }
+
+  .history-lines {
+    left: calc(50% - 1.5px); /* LINE IS .5 */
   }
 
   .history-timeline-circles {
-    left: calc(1.5rem + ((100vw - 1.5rem - 1.5rem - (20px * 5)) / 6) / 2 - (2.125rem/2));
+    width: calc(2.125rem*0.75);
+    transform: translateY(-0.1rem);
+    left: calc(0.75rem + ((100vw - 0.75rem - 0.75rem - (20px * 11)) / 12) / 2 - ((2.125rem*0.75)/2));
     // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
   }
 
@@ -431,11 +445,21 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-intro-text {
+    padding-left: 0rem;
+  }
+
   .history-timeline-line {
-    grid-row-end: span 6;
+    grid-row-end: span 2;
+  }
+
+  .history-lines {
+    left: calc(50% - 1.5px); /* LINE IS .5 */
   }
 
   .history-timeline-circles {
+    width: 2.125rem;
+    transform: translateY(-0.2rem);
     left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)/2 - (2.125rem/2));
     // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
   }
@@ -525,17 +549,27 @@ small {
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-intro-text {
+    padding-left: 3.2rem;
+  }
+
   .history-timeline-line {
-    grid-row-end: span 3;
+    grid-row-end: span 1;
+  }
+
+  .history-lines {
+    left: calc(73% - 1.5px); /* LINE IS .73 */
+  }
+  
+  .history-timeline-circles {
+    width: 2.125rem;
+    transform: translateY(-0.2rem);
+    left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)*0.73 - (2.125rem/2)); /* LINE IS .73 */
+    // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
   }
 
   .history-timeline .col2 {
   margin-bottom: 9.688rem;
-  }
-  
-  .history-timeline-circles {
-    left: calc(4.375rem + ((100vw - 4.375rem - 4.375rem - (20px * 11))/12)/2 - (2.125rem/2));
-    // (left .grid padding + ((100vw - right .grid padding - left .grid padding - (.grid grid-gap * 11))/12)/2 - (circle width/2))
   }
 
   .history-timeline-images {
@@ -934,7 +968,6 @@ footer {
 }
 
 .history-intro-text {
-  padding-left: 3.2rem;
   color: var(--white);
   display: flex;
   justify-content: space-between;
@@ -974,8 +1007,15 @@ footer {
 .history-timeline-line {
   text-align: center;
   position: relative;
-    background-color: red;
+    // background-color: red;
 
+}
+
+.history-lines {
+  background-color: var(--brown);
+  width: 3px;
+  height: calc(100% + (20px + 17px));
+  position: relative;
 }
 
 .history-timeline-line-svg {
@@ -995,8 +1035,6 @@ footer {
 
 .history-timeline-circles {
   position: absolute;
-  width: 2.125rem;
-  transform: translateY(-0.2rem);
   z-index: 6;
 }
 
