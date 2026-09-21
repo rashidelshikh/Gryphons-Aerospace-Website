@@ -536,11 +536,12 @@ small {
 
   /* ~~~~~~ PAGES: TEAM ~~~~~~ */
   .team-list {
-    padding: 4.1rem 2rem 0 2rem;
+    padding: 4.1rem 3.5% 0 3.5%;
   }
 
   .role-profiles {
     justify-content: flex-start;
+    // justify-content: center;
   }
 
   /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
@@ -903,6 +904,16 @@ footer {
   margin-top: 0.938rem;
 }
 
+.profile-socials {
+  margin-top: 0.5rem;
+  width: 1.8rem;
+  transition: all 0.13s ease-in;
+}
+
+.profile-socials:hover {
+  opacity: 0.7;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: AIRFRAMES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .airframe-img {
   max-width: 416px;
@@ -1008,7 +1019,6 @@ footer {
   text-align: center;
   position: relative;
     // background-color: red;
-
 }
 
 .history-lines {
@@ -1030,7 +1040,6 @@ footer {
   top: 50%;
   transform: translateX(-0.5315rem);
   z-index: -1;
-
 }
 
 .history-timeline-circles {
