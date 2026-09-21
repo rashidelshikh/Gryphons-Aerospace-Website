@@ -828,7 +828,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem 3.6rem;
-  align-items: center;
+  align-items: start;
 }
 
 .profile {
@@ -854,11 +854,13 @@ footer {
 
 .profile-img-pill {
   width: 223px;
+  height: 166px;
   border-radius: 4.625rem;
 }
 
 .profile-img-rect {
   width: 223px;
+  height: 166px;
   border-radius: 1rem;
 
 }
@@ -872,6 +874,7 @@ footer {
   max-width: 416px;
   width: 100%;
   border-radius: 1rem;
+  height: 253px;
 }
 
 .airframe-list {
@@ -893,7 +896,10 @@ footer {
 }
 
 .contact-group {
-  padding-bottom: 6.7rem;
+  // padding-bottom: 6.7rem;
+  /* using padding above if you have a button below the social icons */
+
+  padding-bottom: 4.5rem;
 }
 
 .contact-socials {
