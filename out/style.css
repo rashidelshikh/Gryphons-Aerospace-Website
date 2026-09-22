@@ -59,6 +59,7 @@ body {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TYPOGRAPHY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 h1, h2, h3, h4, h5, h6, p, .subtitle {
+  hyphens: manual;
   margin: 0;
 }
 h1 {
@@ -301,6 +302,11 @@ small {
     overflow-x: hidden;
   }
 
+  /* ~~~~~~ IMAGES ~~~~~~ */
+  .img-header-container {
+    grid-row-start: 1;
+  }
+
   /* ~~~~~~ NAV ~~~~~~ */
   .nav_burger_content {
     width: calc(100% - 4.5rem);
@@ -332,6 +338,20 @@ small {
   line-height: 100%;
   }
 
+  /* ~~~~~~ PAGES: GENERAL ~~~~~~ */
+  .index-intro, .team-intro, .airframes-intro, .contact-intro {
+    padding-top: 5.5rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .cta-banner {
+    background-image: url(images/assets/background-cta-mobile.svg)!important;
+  }
+
+  .index-intro {
+    background-image: url(images/assets/background-pattern-mobile.svg)!important;
+  }
+
   /* ~~~~~~ PAGES: TEAM ~~~~~~ */
   .team-list {
     padding: 4.1rem 0rem 0 0rem;
@@ -341,12 +361,20 @@ small {
     justify-content: space-around;
   }
 
+  .profile-socials {
+    width: 1.7rem;
+  }
+
   /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
   .airframe-list {
   grid-gap: 2.6rem 0;
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-intro {
+    padding-top: 8.8rem;
+  }
+  
   .history-intro-text {
     padding-left: 0rem;
   }
@@ -367,6 +395,11 @@ small {
 
   .history-timeline-images {
     margin: 0.76rem 0 3rem 0;
+  }
+
+  .history-timeline-img {
+    width: 80%;
+    height: 100%;
   }
 }
 
@@ -419,6 +452,11 @@ small {
     grid-gap: 20px;
   }
 
+  /* ~~~~~~ IMAGES ~~~~~~ */
+  .img-header-container {
+    grid-row-start: 1;
+  }
+
   /* ~~~~~~ NAV ~~~~~~ */
   .nav_burger_content {
     width: 280px;
@@ -430,6 +468,20 @@ small {
   line-height: 140%;
   }
 
+  /* ~~~~~~ PAGES: GENERAL ~~~~~~ */
+  .index-intro, .team-intro, .airframes-intro, .contact-intro {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+
+  .cta-banner {
+    background-image: url(images/assets/background-cta-tablet.svg)!important;
+  }
+
+  .index-intro {
+    background-image: url(images/assets/background-pattern-tablet.svg)!important;
+  }
+
   /* ~~~~~~ PAGES: TEAM ~~~~~~ */
   .team-list {
     padding: 4.1rem 1rem 0 1rem;
@@ -439,12 +491,20 @@ small {
     justify-content: space-evenly;
   }
 
+  .profile-socials {
+    width: 1.6rem;
+  }
+
   /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
   .airframe-list {
   grid-gap: 2rem;
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-intro {
+    padding-top: 14rem;
+  }
+
   .history-intro-text {
     padding-left: 0rem;
   }
@@ -466,6 +526,11 @@ small {
 
   .history-timeline-images {
     margin: 1rem 0 6rem 0;
+  }
+
+  .history-timeline-img {
+    width: 21.938rem;
+    height: 14.625rem;
   }
 }
 
@@ -518,6 +583,11 @@ small {
     grid-gap: 20px;
   }
 
+  /* ~~~~~~ IMAGES ~~~~~~ */
+  .img-header-container {
+    grid-row-start: auto;
+  }
+
   /* ~~~~~~ NAV ~~~~~~ */
   .nav_burger_content {
     width: 280px;
@@ -530,8 +600,21 @@ small {
   }
 
   /* ~~~~~~ PAGES: GENERAL ~~~~~~ */
+  .index-intro, .team-intro, .airframes-intro, .contact-intro {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
+
   .intro-text {
     padding-right: 3.5rem;
+  }
+
+  .cta-banner {
+    background-image: url(images/assets/background-cta.svg)!important;
+  }
+
+  .index-intro {
+    background-image: url(images/assets/background-pattern.svg)!important;
   }
 
   /* ~~~~~~ PAGES: TEAM ~~~~~~ */
@@ -544,12 +627,20 @@ small {
     // justify-content: center;
   }
 
+  .profile-socials {
+    width: 1.8rem;
+  }
+
   /* ~~~~~~ PAGES: OUR AIRFRAMES ~~~~~~ */
   .airframe-list {
   grid-gap: 2.8rem;
   }
 
   /* ~~~~~~ PAGES: COMPETITION HISTORY ~~~~~~ */
+  .history-intro {
+    padding-top: 14rem;
+  }
+
   .history-intro-text {
     padding-left: 3.2rem;
   }
@@ -575,6 +666,11 @@ small {
 
   .history-timeline-images {
     text-align: center;
+  }
+
+  .history-timeline-img {
+    width: 21.938rem;
+    height: 14.625rem;
   }
 
   .history-timeline-imgfront, .history-timeline-imgback {
@@ -770,7 +866,7 @@ footer {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SPECIAL INSTANCES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ BROWSER TOO SMALL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .browser-too-small {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -808,11 +904,6 @@ footer {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGES: GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.index-intro, .team-intro, .airframes-intro, .contact-intro {
-  padding-top: 8rem;
-  padding-bottom: 5rem;
-}
-
 .intro-p-only {
   margin-top: 2.375rem;
 }
@@ -906,7 +997,6 @@ footer {
 
 .profile-socials {
   margin-top: 0.5rem;
-  width: 1.8rem;
   transition: all 0.13s ease-in;
 }
 
@@ -973,7 +1063,6 @@ footer {
   background-size: cover;
   min-height: 100vh;
   box-sizing: border-box;
-  padding-top: 14rem;
   padding-bottom: 4rem;
   z-index: 10;
 }
@@ -1054,8 +1143,6 @@ footer {
 .history-timeline-img {
   object-fit: cover;
   border-radius: 0.688rem;
-  width: 21.938rem;
-  height: 14.625rem;
 }
 
 .history-timeline-imgfront {
