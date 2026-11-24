@@ -12,6 +12,7 @@ html, body {
   padding: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 body {
@@ -236,6 +237,7 @@ small {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  overflow-x: hidden;
 }
 
 // .cell {
